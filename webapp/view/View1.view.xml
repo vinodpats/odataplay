@@ -1,0 +1,46 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.patsODataPlay.controller.View1" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="OData">
+				<content>
+					<Table id="__table0" items="{ path: '/SalesPredictionDataSet', sorter: {path: 'Customer', group: true} }" noDataText="No data available"
+						fixedLayout="false" growing="true" growingThreshold="8">
+						<columns>
+							<Column id="__column0">
+								<header>
+									<Label id="__label0" text="Month Year"/>
+								</header>
+							</Column>
+							<Column id="__column1">
+								<header>
+									<Label id="__label1" text="Material"/>
+								</header>
+							</Column>
+							<Column demandPopin="true" id="__column2" minScreenWidth="Desktop">
+								<header>
+									<Label id="__label2" text="Customer"/>
+								</header>
+							</Column>
+							<Column demandPopin="true" id="__column3" minScreenWidth="Desktop">
+								<header>
+									<Label id="__label3" text="StockInHand"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem counter="0" id="__itemList" vAlign="Middle">
+								<cells>
+									<Text id="__text0" maxLines="0" text="{Month_Year}"/>
+									<Text id="__text1" maxLines="0" text="{Material}"/>
+									<Text id="__text2" maxLines="0" text="{Customer}"/>
+									<Text id="__text3" maxLines="0" text="{StockInHand}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
